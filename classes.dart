@@ -62,3 +62,31 @@ class Cookie {
     isAvailable = false;
   }
 }
+
+// Static variables and methods: A static variable is a variable that is shared among all instances of a class.
+class Circle {
+  static const double pi = 3.14;
+  static int numberOfCircles = 0;
+  double radius;
+  Circle(this.radius) {
+    numberOfCircles++;
+  }
+  double calculateArea() {
+    return pi * radius * radius;
+  }
+  static void printNumberOfCircles() {
+    print("Number of circles: $numberOfCircles");
+  }
+}
+
+// Private variables: A private variable is a variable that can only be accessed within the class in which it. is declared.
+// To declare a private variable in Dart, use the underscore (_) symbol before the variable name.
+// class Cookie {
+//   String _name;
+//   int _quantity;
+//   double _price;
+//   bool _isAvailable;
+//   Cookie(this._name, this._quantity, this._price, this._isAvailable);
+//   void printCookie() {
+//     print("Name: $_name");
+//     print("Quantity: $_quantity");
